@@ -1,0 +1,26 @@
+= I dont give a shit (idgas)
+
+Inspired by groovys questionmark-syntax. 'I dont give a shit' tries to implement this behavior in ruby.
+
+You can put a +?+ behind every method-call to ignore, weather it returns nil.
+
+So chaining of calls within deep data-structures is painless:
+
+	some_data_that_might_contain_nil.order?.shoppingcart?.item?.second?.price?
+
+This call would return the price of the second item in the shopping-cart or +nil+ if some of the objects in the data-structure is +nil+ itself.
+
+== Install
+
+  $ gem install phoet-idgas -s http://gems.github.com
+
+== How to use
+
+Just require the gem and put it in a place where it can override the default behavior of your script. 
+You might put it as an initializer in your rails application or something like that.
+
+	$ irb -rubygems
+	require 'i_dont_give_a_shit'
+	
+	nil.i?.dont?.give?.a?.shit?
+	=> nil
