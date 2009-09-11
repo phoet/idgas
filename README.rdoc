@@ -2,7 +2,7 @@
 
 Inspired by groovys questionmark-syntax. 'I dont give a shit' tries to implement this behavior in ruby.
 
-You can put a +?+ behind every method-call to ignore, weather it returns nil.
+You can put a ? behind every method-call to ignore, weather it returns nil.
 
 So chaining of calls within deep data-structures is painless:
 
