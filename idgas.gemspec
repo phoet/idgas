@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name = "i_dont_give_a_shit"
+  s.name = "idgas"
   s.version = "0.0.1"
   s.rubyforge_project = 'none'
 
