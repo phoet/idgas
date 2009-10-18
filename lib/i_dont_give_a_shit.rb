@@ -10,10 +10,10 @@ class Object
   def method_missing(sym,*args, &block)
     method_name = sym.to_s
     if /.+\?$/ =~ method_name
-      puts "object '#{sym}' '#{args}' '#{block}'"
+      #puts "object '#{sym}' '#{args}' '#{block}'"
       send(method_name[0..-2], *args, &block)
     else
-      puts "object missing '#{sym}' '#{args}' '#{block}'"
+      #puts "object missing '#{sym}' '#{args}' '#{block}'"
       m_m(sym,*args, &block)
     end
   end
@@ -27,10 +27,10 @@ class NilClass
   def method_missing(sym,*args, &block)
     method_name = sym.to_s
     if /.+\?$/ =~ method_name
-      puts "nil '#{sym}' '#{args}' '#{block}'"
+      #puts "nil '#{sym}' '#{args}' '#{block}'"
       self
     else
-      puts "nil missing '#{sym}' '#{args}' '#{block}'"
+      #puts "nil missing '#{sym}' '#{args}' '#{block}'"
       super.m_m(sym,*args, &block)
     end
   end
